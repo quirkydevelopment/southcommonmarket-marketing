@@ -1,0 +1,284 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the forms panel component.
+// -----------------------------------------------------------------------------
+
+.dashboard-content {
+  .btn-icon {
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    width: 95px;
+    height: 34px;
+    padding: 8px;
+    margin: auto;
+    
+    // font-size: 12.5px;
+    font: normal 12.5px $montserrat-regular;
+    color: $white;
+    text-transform: none;
+    letter-spacing: 0;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: none !important;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    &:before {      
+      content: '';
+
+      position: relative;
+      top: 1px;
+      right: initial;
+      bottom: initial;
+      left: initial;
+
+      width: 14px;
+      height: 14px;
+      margin-right: 3px;
+      
+      background-repeat: no-repeat;
+      background-size: 14px;
+      background-position: center;
+    }
+  }
+
+  .btn-table {
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    height: 34px;
+    padding: 8px 10px;
+    margin: auto;
+    font: normal 14px $montserrat-regular;
+    color: $white;
+    text-transform: none;
+    letter-spacing: 0;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: none !important;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .btn-form {
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    height: 34px;
+    padding: 8px 10px;
+    // margin: auto;
+    font: normal 14px $montserrat-regular;
+    color: $white;
+    text-transform: none;
+    letter-spacing: 0;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: none !important;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .btn-info {
+    background-color: $picton-blue;
+    border-color: $picton-blue;
+
+    &:before {
+      background-image: url('../assets/images/icon-info.svg');
+    }
+
+    @include on-event() {
+      background-color: $curious-blue;
+      border-color: $curious-blue;
+    }
+  }
+
+  .btn-accept {
+    background-color: $olivine;
+    border-color: $olivine;
+
+    &:before {
+      background-image: url('../assets/images/icon-accept.svg');
+    }
+
+    @include on-event() {
+      background-color: $sushi;
+      border-color: $sushi;
+    }
+  }
+
+  .btn-decline {
+    background-color: $torch-red;
+    border-color: $torch-red;
+
+    &:before {
+      background-image: url('../assets/images/icon-decline.svg');
+    }
+
+    @include on-event() {
+      background-color: $monza;
+      border-color: $monza;
+    }
+  }
+
+  .btn-pending {
+    background-color: $sun;
+    border-color: $sun;
+
+    &:before {
+      background-image: url('../assets/images/icon-pending.svg');
+    }
+
+    @include on-event() {
+      background-color: $gamboge;
+      border-color: $gamboge;
+    }
+  }
+
+  .btn-delete {
+    background-color: $torch-red;
+    border-color: $torch-red;
+
+    &:before {
+      background-image: url('../assets/images/icon-delete.svg');
+    }
+
+    @include on-event() {
+      background-color: $monza;
+      border-color: $monza;
+    }
+  }
+
+  .btn-block {
+    background-color: $tree-poppy;
+    border-color: $tree-poppy;
+
+    &:before {
+      background-image: url('../assets/images/icon-block.svg');
+    }
+
+    @include on-event() {
+      background-color: $tahiti-gold;
+      border-color: $tahiti-gold;
+    }
+  }
+
+  .btn-unblock {
+    background-color: $red-damask;
+    border-color: $red-damask;
+
+    &:before {
+      background-image: url('../assets/images/icon-unblock.svg');
+    }
+
+    @include on-event() {
+      background-color: $piper;
+      border-color: $piper;
+    }
+  }
+
+  .btn-edit {
+    background-color: $picton-blue;
+    border-color: $picton-blue;
+
+    &:before {
+      background-image: url('../assets/images/icon-edit.svg');
+    }
+
+    @include on-event() {
+      background-color: $curious-blue;
+      border-color: $curious-blue;
+    }
+  }
+
+  .btn-red {
+    background-color: $torch-red;
+    border-color: $torch-red;
+
+    &:before {
+      display: none;
+    }
+
+    @include on-event() {
+      background-color: $monza;
+      border-color: $monza;
+    }
+  }
+
+  .btn-green {
+    background-color: $olivine;
+    border-color: $olivine;
+
+    &:before {
+      display: none;
+    }
+
+    @include on-event() {
+      background-color: $sushi;
+      border-color: $sushi;
+    }
+  }
+
+  .btn-blue {
+    background-color: $picton-blue;
+    border-color: $picton-blue;
+
+    &:before {
+      display: none;
+    }
+
+    @include on-event() {
+      background-color: $curious-blue;
+      border-color: $curious-blue;
+    }
+  }
+
+  .btn-orange {
+    background-color: $flamingo;
+    border-color: $flamingo;
+
+    &:before {
+      display: none;
+    }
+
+    @include on-event() {
+      background-color: $tia-maria;
+      border-color: $tia-maria;
+    }
+  }
+
+  .btn-scooter {
+    background-color: $scooter;
+    border-color: $scooter;
+
+    &:before {
+      display: none;
+    }
+
+    @include on-event() {
+      background-color: $java;
+      border-color: $java;
+    }
+  }
+}

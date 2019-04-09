@@ -1,0 +1,166 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the shop page.
+// ----------------------------------------------------------------------------
+
+.footer-shop {
+
+  .footer-links {
+    position: relative;
+    background-image: url(../assets/images/bg-contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(200,200,200,.75);
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .holder-footer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .holder-cta {
+      width: 30%;
+    }
+
+    .holder-links {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      width: 70%;
+    }
+
+    .holder-logo-image {
+      margin-bottom: 20px;
+    }
+
+    .holder-social {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .social-list {
+      width: auto;
+      padding: 0 8px;
+      cursor: pointer;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .scm-title {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: .5px;
+      color: $green-apple;
+      font-family: $montserrat-medium;
+      text-transform: uppercase;
+    }
+
+    .scm-contact {
+      font-size: 28px;
+      color: $blacked;
+      font-family: $montserrat-medium;
+    }
+
+    .scm-contact-link {
+      color: $blacked;
+    }
+
+    .social-image {
+      width: 100%;
+      max-width: 37.5px;
+      height: 40px;
+    }
+
+    .item {
+      width: 275px;
+    }
+
+    .item-title {
+      color: $blacked;
+      font-size: 20px;
+      font-family: $montserrat-semi-bold;
+      text-transform: uppercase;
+    }
+
+    .list,
+    .link {
+      color: $text-color;
+      font-family: $montserrat-regular;
+    }
+
+    .inner-list {
+      padding: 0;
+      list-style-type: none;
+    }
+
+  }
+
+  .footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    background: $gradient-green;
+
+    .text-copyright {
+      margin: 0;
+      font-size: 12px;
+      color: $white;
+      font-family: $montserrat-regular;
+      text-align: center;
+    }
+  }
+
+  @include respond-to(md) {
+    .footer-links {
+      .scm-title {
+        font-size: 12px;
+      }
+
+      .scm-contact {
+        font-size: 18px;
+      }
+
+      .holder-links {
+        padding-left: 25px;
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .footer-links {
+      .holder-cta {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+      }
+
+      .holder-links {
+        width: 100%;
+      }
+
+      .item {
+        width: 50%;
+      }
+    }
+  }
+}

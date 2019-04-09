@@ -1,0 +1,482 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+// styles for header (default)
+.header {
+  .navbar {
+    padding: 10px 25px;
+    margin-top: 17px;
+
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .container-fluid {
+    position: relative;
+    
+    align-items: center;
+  }
+
+  .navbar-brand {
+    position: relative;
+  }
+
+  .logo-main {
+    width: 130px;
+    height: auto;
+
+    opacity: 1;
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .logo-main-scrolled {
+    position: absolute;
+    top: -500px;
+    right: initial;
+    bottom: initial;
+    left: 0;
+
+    width: 120px;
+    
+    opacity: 0;
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .navbar {
+    .navbar-menu {
+      margin-top: -70px;
+    }
+  
+    .nav-link {
+      position: relative;
+  
+      padding: 2px 0;
+      margin: 0 20px;
+  
+      font: normal 16px $montserrat-bold;
+      letter-spacing: .5px;
+      color: $white;
+      text-transform: uppercase;
+
+      transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  
+      &:after {
+        content: '';
+  
+        position: absolute;
+        top: initial;
+        right: initial;
+        bottom: 0;
+        left: 0;
+        
+        width: 0;
+        height: 2px;
+        background-color: $white;
+  
+        transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+  
+      @include respond-to(lg-up) {
+        @include on-event() {
+          text-shadow: 0 0 50px $black;
+  
+          // &:after {
+          //   width: 100%;
+          // }
+        }
+
+        &.active {
+          text-shadow: 0 0 50px $black;
+        }
+      }
+
+      &.active {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .navbar-menu-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .navbar-heading {
+      margin: 0;
+
+      font: normal 11px $montserrat-semi-bold;
+      letter-spacing: 2.5px; 
+      line-height: 16.5px;
+      color: $brand-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .navbar-toggler-close {
+    position: relative;
+
+    color: $dark-grey;
+    
+    cursor: pointer;
+
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: -2px;
+      right: -9px;
+      bottom: initial;
+      left: initial;
+
+      width: 32px;
+      height: 32px;
+      margin: auto;
+
+      background-color: $black;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    .fas {
+      position: relative;
+    }
+  }
+
+  .navbar-menu-info {
+    display: none;
+    margin: 40px 0 20px;
+
+    font: normal 13px $montserrat-regular;
+    color: $white;
+    line-height: 24px;
+  }
+
+  .navbar-menu-social {
+    display: none;
+
+    a {
+      margin-right: 15px;
+      
+      color: $white-opacity;
+
+      transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  @include respond-to(lg-down) {
+    .navbar {
+      .navbar-menu {
+        margin-top: -50px;
+      }
+      
+      .nav-link {
+        margin: 0 10px;
+
+        letter-spacing: 0;
+      }
+    }
+
+    .logo-main {
+      width: 100px;
+    }
+
+    .logo-main-scrolled {
+      width: 100px;
+    }
+  }
+
+  @include respond-to(md-down) {
+    .logo-main {
+      width: 100px;
+    }
+
+    .navbar-menu {
+      position: fixed;
+      top: 0;
+      right: -290px;
+
+      width: 100%;
+      max-width: 290px;
+      height: 100%;
+      padding: 40px 35px;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      background-color: $cod-gray;
+
+      transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+      &.active {
+        right: 0;
+      }
+    }
+
+    .navbar {
+      margin-top: 10px;
+      
+      .navbar-menu {
+        margin-top: 0;
+      }
+
+      .nav-item {
+        line-height: 45px;
+      }
+
+      .nav-link {
+        display: inline-block;
+        margin: 8px 0;
+
+        font: normal 18px $montserrat-regular;
+        letter-spacing: 0;
+        text-transform: capitalize;
+      }
+    }
+
+    .navbar-toggler-custom {
+      margin-top: -20px;
+    }
+
+    .navbar-menu-header,
+    .navbar-menu-info,
+    .navbar-menu-social {
+      display: flex;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .navbar {
+      padding: 5px 15px;
+      margin-top: 5px;
+    }
+
+    .logo-main {
+      width: 80px;
+    }
+
+    .navbar-toggler-custom {
+      margin-top: -50px;
+    }
+  }
+}
+
+// styles for header (default) when scrolled / not on top
+.header-scrolled {
+  .navbar {
+    margin-top: 0;
+
+    background-color: $brand-color;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+
+    .navbar-menu {
+      margin-top: 0;
+    }
+  }
+
+  .logo-main {
+    position: absolute;
+
+    height: 0;
+
+    opacity: 0;
+  }
+
+  .logo-main-scrolled {
+    position: relative;
+    top: initial;
+
+    opacity: 1;
+  }
+  
+  @include respond-to(md-down) {
+    .navbar-toggler-custom {
+      margin-top: 0;
+    }
+  }
+}
+
+
+/***********************************
+***** Dashboard - Header Styles ****
+***********************************/
+.dashboard-header {
+  .navbar {
+    padding: 0 30px;
+    background: #57913d;
+    background: -moz-linear-gradient(top, #57913d 0%, #7fab4a 78%, #98bd54 100%);
+    background: -webkit-linear-gradient(top, #57913d 0%,#7fab4a 78%,#98bd54 100%);
+    background: linear-gradient(to bottom, #57913d 0%,#7fab4a 78%,#98bd54 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57913d', endColorstr='#98bd54',GradientType=0 );
+    box-shadow: 0 10px 20px $black-opacity20;
+  }
+
+  .container-fluid {
+    position: relative;
+  }
+
+  .logo-link {
+    height: 80px;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    width: auto;
+    height: 100%;
+  }
+
+  .avatar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 10px 15px;
+
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    @include on-event() {
+      text-decoration: none;
+
+      background-color: $text-color;
+    }
+
+    &:hover {
+      .avatar-dropdown {
+        top: 80px;
+      
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    .avatar-holder {
+      max-width: 50px;
+    }
+  
+    .avatar {
+      width: 100%;
+  
+      border: 2px solid $white;
+      border-radius: 50%;
+      box-shadow: 1px 2px 10px $emperor;
+    }
+  
+    .username {
+      margin-left: 5px;
+
+      // font-size: 16px;
+      font: normal 16px $bebas-regular;
+      line-height: 1.4;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    .avatar-dropdown {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      bottom: initial;
+      left: initial;
+      z-index: 10;
+
+      // width: 191.5px;
+      width: 150px;
+      
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all .5s ease-in-out;
+
+      &-item {
+        padding: 0;
+
+        text-align: center;
+      }
+
+      &-link {
+        display: block;
+        padding: 12px 0;
+
+        font: normal 16px $montserrat-regular;
+        color: $white;
+
+        background-color: $apple;
+        box-shadow: 0 3px 5px $boulder;
+
+        transition: all .2s ease-in-out;
+
+        @include on-event() {
+          text-decoration: none;
+
+          background-color: $chateau-green;
+          // box-shadow: 0 5px 10px $boulder;
+        }
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    .navbar {
+      padding: 0;
+    }
+
+    .logo-link {
+      margin-left: 40px;
+    }
+
+    .avatar-link {
+      .username {
+        display: none;
+      }
+    }
+
+    .avatar-dropdown {
+      width: 120px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .logo-link {
+      height: 55px;
+      margin-left: 20px;
+    }
+
+    .avatar-link {
+      height: 55px;
+      padding: 0 10px;
+
+      &:hover {
+        .avatar-dropdown {
+          top: 55px;
+        }
+      }
+
+      .avatar-holder {
+        max-width: 40px;
+      }
+
+      .avatar-dropdown {
+        right: 0;
+  
+        width: 100px;
+  
+        &-link {
+          padding: 10px 0;
+  
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

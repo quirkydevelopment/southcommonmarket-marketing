@@ -1,0 +1,78 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the floating social media component.
+// -----------------------------------------------------------------------------
+
+.floating-social-media {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  bottom: 0;
+  left: initial;
+  z-index: 50;
+
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  .social-media-item {    
+    position: relative;
+
+    padding: 5px 0;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:hover {
+      .social-media-text {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+
+  .social-media-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    
+    font-size: 14px;
+    color: $white;
+
+    border: 2px solid $white;
+    border-radius: 50%;
+
+    @include on-event() {
+      text-decoration: none;
+    }
+  }
+
+  .social-media-text {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    bottom: 0;
+    left: initial;
+    
+    display: flex;
+    align-items: center;
+    margin: auto;
+
+    font: normal 12px $montserrat-regular;
+
+    transform: scale(0);
+    transform-origin: 100% 50%;
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  @include respond-to(sm-down) {
+    display: none;
+  }
+}

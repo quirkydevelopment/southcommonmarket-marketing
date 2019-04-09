@@ -1,0 +1,139 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the vendor shop page.
+// ----------------------------------------------------------------------------
+
+.vendor-shop {
+
+  .holder-vendor {
+    margin-top: 30px;
+  }
+
+  .holder-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .holder-input {
+    display: flex;
+    width: 50%;
+    padding: 0 15px;
+  }
+
+  .btn-select {
+    margin-left: auto;
+  }
+
+  .input-select,
+  .btn-select {
+    font-size: 14px;
+    font-family: $montserrat-light;
+    font-weight: 900;
+  }
+
+  .btn-box {
+    width: 100%;
+    height: 40px;
+    max-width: 150px;
+    padding: 0 15px;
+    
+    color: $blacked;
+    border: 1px solid $dark-grey;
+
+    transition: all .3s ease-in-out;
+
+    &.btn-search {
+      @include on-event() {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .btn-search {
+    padding: 3px 15px;
+    font-size: 14px;
+    font-family: $montserrat-light, 'Font Awesome\ 5 Free';
+    font-weight: 900;
+
+    &::placeholder {
+      color: $blacked;
+      opacity: 1;
+    }
+  }
+
+  .vendor-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 850px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+  }
+
+  .vendor-name {
+    text-align: center;
+  }
+
+  .product-image {
+    margin: 0 auto 8px;
+    width: 100%;
+    height: auto;
+  }
+
+  .page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+
+    color: $blacked;
+    font-family: $montserrat-medium;
+    font-size: 24px;
+
+    border: none;
+    border-radius: 50%;
+
+    &.active {
+      position: relative;
+      
+      background-color: #e9ecef;
+    }
+  }
+
+  .page-list-item {
+    width: auto;
+    padding: 0 8px;
+  }
+
+  @include respond-to(sm) {
+    .list {
+      width: 33.33%;
+    }
+  }
+
+  @include respond-to(xs) {
+    .list {
+      width: 50%;
+      padding: 8px;
+    }
+  }
+}

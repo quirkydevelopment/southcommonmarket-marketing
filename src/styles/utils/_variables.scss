@@ -1,0 +1,105 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+$font-opensans: 'Open Sans';
+
+// custom fonts
+$bebas-regular: 'Bebas Regular';
+$lora-bold: 'Lora Bold';
+$lora-regular: 'Lora Regular';
+$montserrat-black: 'Montserrat Black';
+$montserrat-bold: 'Montserrat Bold';
+$montserrat-extra-bold: 'Montserrat Extra Bold';
+$montserrat-light: 'Montserrat Light';
+$montserrat-medium: 'Montserrat Medium';
+$montserrat-regular: 'Montserrat Regular';
+$montserrat-semi-bold: 'Montserrat Semi Bold';
+$nexa-bold: 'Nexa Bold';
+$bukhari-script-regular: 'Bukhari Script Regular';
+
+/// @type List
+$text-font-stack: $font-opensans, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #222 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #39b54a !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #EDEDED !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: #999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #444 !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../assets/' !default;
+
+// custom colors
+$white: #fff;
+$light-gray: #f4f5f0;
+$concrete: #f3f3f3;
+$willow-brook: #eff5eb;
+$mercury: #e6e6e6;
+$white-opacity: rgba(255, 255, 255, 0.25);
+$desert-storm: #f0f1ee;
+$charcoal-grey: #9e9e9e;
+$boulder: #757575;
+$emperor: #555555;
+$trout: #495057;
+$black-opacity20: rgba(0, 0, 0, 0.2);
+$black-opacity40: rgba(0, 0, 0, 0.4);
+$cod-gray: #0C0C0C;
+$black-pearl: #010507;
+$black: #000;
+$yellow: #F3FF00;
+$sun: #fbb117;
+$gamboge: #df9d12;
+$tree-poppy: #ff9b1a;
+$flamingo: #f26522;
+$tia-maria: #db5312;
+$tahiti-gold: #e98709;
+$golden-sun: #f4c547;
+$red-damask: #e06e38;
+$piper: #cd5e29;
+$pine-glade: #bdcf8f;
+$olivine: #9bb65e;
+$apple-green: #93b851;
+$sushi: #85a243;
+$hippie-green: #669048;
+$chateau-green: #39b54a;
+$green-alcohol: #8cc63f;
+$apple: #33A242;
+$apple2: #58923d;
+$green-apple: #518e3c;
+$dark-green: #4d5b26;
+$milo-green: #5c963e;
+$leaf-green: #d2e1b6;
+$java: #1aafc1;
+$picton-blue: #47bced;
+$curious-blue: #33a2d1;
+$scooter: #26c7db;
+$powder-blue: #0060ff;
+$torch-red: #ea0027;
+$monza: #ba001f;
+$blacked: #060604;
+$gradient-green: linear-gradient(to bottom, #93b84f 20%,#58923e 71%,#58923e 79%);

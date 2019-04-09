@@ -1,0 +1,382 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Basic styles for links
+ */
+ a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+.btn,
+a {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+
+  @include on-event {
+    outline: 0;
+    @include boxshadow(none);
+  }
+}
+
+/**
+ * Basic styles for input fields
+ */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-focus-ring-color: none;
+  outline: none;
+
+  @include on-event {
+    @include boxshadow(none);
+  }
+}
+
+// styles for navbar toggler on marketing pages
+.navbar-toggler-custom {
+  position: relative;
+
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+
+  border: 0;
+  border-radius: 0;
+
+  cursor: pointer;
+
+  &:before {
+    content: 'MENU';
+
+    position: absolute;
+    top: 0;
+    right: initial;
+    bottom: 0;
+    left: -60px;
+   
+    display: flex;
+    align-items: center;
+
+    font: normal 14px $montserrat-medium;
+    color: $white;
+  }
+
+  .icon-bar {
+    display: block;
+    height: 3px;
+    width: 30px;
+
+    background: $white;
+
+    @include transition(0.5s cubic-bezier(0.65, 0.05, 0.36, 1));
+
+    @include boxshadow(none);
+
+    &+.icon-bar {
+      margin-top: 7px;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .icon-bar {
+      &:first-child {
+        @include transform(rotate(225deg) translate(-6px, -5px));
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        @include transform(rotate(-225deg) translate(-6px, 6px));
+      }
+    }
+  }
+
+  @include on-event() {
+    outline: 0;
+  }
+
+  @include respond-to(md-down) {
+    display: flex;
+  }
+}
+
+// styles for navbar toggler on dashboard panel
+.navbar-toggler-custom-dashboard {
+  position: relative;
+
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+
+  border: 0;
+  border-radius: 0;
+
+  cursor: pointer;
+  
+  &:before {
+    position: absolute;
+    top: 0;
+    right: initial;
+    bottom: 0;
+    left: -60px;
+  
+    display: flex;
+    align-items: center;
+
+    font: normal 14px $montserrat-medium;
+    color: $white;
+  }
+
+  .icon-bar {
+    display: block;
+    height: 3px;
+    width: 30px;
+
+    background: $white;
+
+    @include transition(0.5s cubic-bezier(0.65, 0.05, 0.36, 1));
+
+    @include boxshadow(none);
+
+    &+.icon-bar {
+      margin-top: 5px;
+    }
+    
+    &:first-child {
+      @include transform(rotate(225deg) translate(-6px, -5px));
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      @include transform(rotate(-225deg) translate(-6px, 6px));
+    }
+  }
+
+  @include on-event() {
+    outline: 0;
+  }
+
+  @include respond-to(md-down) {
+    display: flex;
+    margin-left: 10px;
+  }
+}
+
+.sidebar-collapsed {
+  .navbar-toggler-custom-dashboard {  
+    .icon-bar {
+      &+.icon-bar {
+        margin-top: 7px;
+      }
+      
+      &:first-child {
+        @include transform(none);
+      }
+
+      &:nth-child(2) {
+        opacity: 1;
+      }
+
+      &:last-child {
+        @include transform(none);
+      }
+    }
+  }
+}
+
+
+// styles for scroll to next section
+.scroll-next-section {
+  position: absolute;
+  top: initial;
+  right: 90px;
+  bottom: 80px;
+  left: initial;
+  z-index: 10;
+
+  .scroll-trigger {
+    position: relative;
+
+    padding-left: 20px;
+
+    font: normal 10px $montserrat-semi-bold;
+    color: $white;
+    letter-spacing: 3px;
+    line-height: 30px;
+
+    @include on-event() {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: 0;
+      
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      border-bottom: 2px solid $brand-color;
+      border-right: 2px solid $brand-color;
+
+      pointer-events: none;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content: '';
+
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      bottom: 0;
+      left: initial;
+
+      display: block;
+      width: 2px;
+      height: 100px;
+
+      background-color: $brand-color;
+
+      pointer-events: none;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    right: 65px;
+    bottom: 50px;
+  }
+}
+
+// styles for scroll top
+.scroll-top-trigger {
+  position: fixed;
+  top: initial;
+  right: 20px;
+  bottom: 20px;
+  left: initial;
+  z-index: 100;
+  
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 16px;
+  color: $white;
+  
+  background-color: $black;
+
+  opacity: 0;
+  // transition: none;
+  transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @include on-event() {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    .scroll-top-icon {
+      top: -3px;
+    }
+  }
+
+  .scroll-top-icon {
+    position: relative;
+    top: 0;
+
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  @include respond-to(sm-down) {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+.best-seller-text,
+.product-text {
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.best-seller-category,
+.product-category {
+  color: $emperor;
+}
+
+.best-seller-product,
+.product-item {
+  color: $black;
+}
+
+.best-seller-price,
+.product-price {
+  color: $monza;
+}
+
+.pagination-vendor-shop {
+  .page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+
+    color: $blacked;
+    font-family: $montserrat-medium;
+    font-size: 24px;
+
+    border: none;
+    border-radius: 50%;
+
+    &.active {
+      position: relative;
+      
+      background-color: #e9ecef;
+    }
+  }
+
+  .page-list-item {
+    width: auto;
+    padding: 0 8px;
+  }
+}

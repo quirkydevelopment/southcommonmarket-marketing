@@ -1,0 +1,431 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to all modal component.
+// -----------------------------------------------------------------------------
+
+.holder-modals {
+  // position: fixed;
+  // bottom: 0;
+  padding: 40px 280px;
+}
+
+.modal-sample-buttons {
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+}
+
+.holder-image {
+  text-align: center;
+}
+
+.image-modal {
+  width: 100%;
+  max-width: 200px;
+}
+
+.modal-content {
+  margin: 0px auto; 
+  width: 350px;
+  padding: 2;   
+}
+
+.holder-content {
+  position: relative;
+  margin: 4px;
+  padding: 30px 15px 12px;
+  background-color: $light-gray;
+
+  // &:before {
+  //   content: "\f00d";
+  //   position: absolute;
+  //   top: -3px;
+  //   right: 3px;
+  //   font-family: "Font Awesome\ 5 Free";
+  //   font-weight: 900;
+  // }
+
+  .modal-title {
+    margin-bottom: 25px;
+
+    font-size: 26px;
+    font-family: $bebas-regular;
+    color: $hippie-green; 
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    &-tent {
+      font-family: $montserrat-medium;
+      text-transform: capitalize;
+    }
+  }
+
+  .holder-form {
+    .form-title {
+      font-size: 14px;
+      font-family: $montserrat-regular;
+      color: $hippie-green;
+
+      &-month {
+        padding-left: 10px;
+        font-family: $montserrat-medium;
+      }
+    }
+
+
+    .form-input {
+      padding: 4px 5px;
+      width: 100%;
+
+      font-size: 16px;
+      color: $black;
+
+      border-radius: 3px;
+      border: 1px solid $hippie-green;
+
+      &-select {
+        padding: 10px 5px;
+        border-radius: 5px;
+      }
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .holder-input-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-image {
+      padding: 15px 0;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .image-title {
+      font-size: 14px;
+      font-family: $montserrat-light;
+      color: $hippie-green;
+      text-align: center;
+    }
+
+    .custom-file-upload {
+      padding: 4px 5px;
+
+      font-size: 16px;
+      color: $hippie-green;
+
+      border-radius: 3px;
+      border: 1px solid $hippie-green;
+
+      cursor: pointer;
+    }
+  }
+
+  .form-group-holder {
+
+    .form-label {
+      margin: 0;
+      font: normal 16px "Montserrat Medium";
+      line-height: 20px;
+    }
+  }
+
+  .uploaded-image {
+    width: auto;
+    max-width: 90%;
+    max-height: 500px;
+  }
+
+  .label-upload {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+  }
+
+  .holder-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .uploaded-file {
+    max-height: 150px;
+    max-width: 100%;
+  }  
+}
+
+.holder-close {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  opacity: 0.3;
+
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  @include on-event {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 10px;
+    content: ' ';
+    height: 22px;
+    width: 2px;
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal-notification {
+  margin: 3px;
+  background-color: #fefefe;
+}
+
+.modal-notification-info {
+  margin-bottom: 0;
+
+  font-size: 13px;
+  font-family: $montserrat-medium;
+  text-align: center;
+}
+
+.modal-notification-validation {
+  font-size: 26px;
+  font-family: $montserrat-regular;
+  color: $dark-green;
+  text-align: center;
+}
+
+.modal-notification-text {
+  font-size: 14px;
+  font-family: $montserrat-light;
+  text-align: center;
+}
+
+.modal-vendor-name {
+  display: block;
+  color: $dark-green;
+  font-family: $montserrat-semi-bold;
+}
+
+.holder-notification-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .btn {
+    margin: 0 5px;
+  }
+}
+
+.vendor-image {
+  margin: 0 auto 8px;
+  width: 120px;
+  height: 120px;
+
+  background-color: $white;
+  border: 1px solid $hippie-green;
+  border-radius: 5px;
+}
+
+.modal-vendor-logo {
+  width: 100%;
+}
+
+.modal-vendor-title {
+  font-size: 15px;
+  font-family: $montserrat-bold;
+  color: $hippie-green;
+}
+
+.holder-info-list {
+  .info-list {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .inner-list {
+    padding-bottom: 4px;
+  }
+  
+  .list-text {
+    margin: 0;
+    font-size: 14px;
+    color: $trout;
+    font-family: $montserrat-semi-bold;
+  }
+  
+  .list-text-span {
+    font-family: $montserrat-light;
+  }
+  
+  .link-blue {
+    color: $powder-blue;
+  }
+}
+
+.holder-socials {
+  .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
+
+    list-style-type: none;
+  }
+
+  .list {
+    padding: 0 7px;
+  }
+
+  .fab {
+    font-size: 20px;
+  }
+
+  .icon-image {
+    width: 35px;
+
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.modal-warning-logo {
+  width: 100%;
+}
+
+.text-warning {
+  margin-top: -50px;
+  font-size: 40px;
+  font-family: $bebas-regular;
+}
+
+.modal-content-map {
+  width: 300px;
+}
+
+.map-option-title {
+  margin-bottom: 12px;
+
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.map-option {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+
+  &-add {
+    justify-content: center;
+  }
+
+  .option-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    
+    font-size: 14px;
+    font-family: $montserrat-regular;
+  }
+
+  .btn {
+    &-list {
+      padding: 5px;
+      margin-bottom: 6px;
+      width: 35px;
+      height: 35px;
+  
+      font-size: 12px;
+      color: $white;
+  
+      border: 0;
+      border-radius: 100%;
+      cursor: pointer;
+
+      opacity: .8;
+      outline: none;
+
+      transition: all .3s ease-in-out;
+
+      @include on-event() {
+        opacity: 1;
+      }
+    }
+
+    &-add {
+      background-color: $hippie-green;
+    }
+
+    &-del {
+      background-color: $torch-red;
+    }
+
+    &-move {
+      background-color: $gamboge;
+    }
+
+    &-na {
+      background-color: $flamingo;
+    }
+  }
+}
+
+.holder-reserved {
+  display: none;
+
+  text-align: center;
+
+  .reserved-text {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $hippie-green;
+    font-family: $montserrat-light;
+  }
+
+  .reserved-image {
+    max-width: 120px;
+    margin: -18px auto 0;
+    transform: rotate(18.2deg);
+  }
+}
+
+.modal-content-vendor {
+  width: 450px;
+}
+
+.reserved {
+  .holder-reserved {
+    display: block;
+  }
+}

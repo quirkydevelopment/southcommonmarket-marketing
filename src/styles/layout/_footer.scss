@@ -1,0 +1,254 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  padding: 90px 0 60px;
+
+  color: $brand-color;
+
+  background-color: $black;
+
+  .container {
+    max-width: 960px;
+  }
+
+  .half-info {
+    padding-right: 40px;
+  }
+
+  .half-subscribe {
+    padding-left: 40px;
+  }
+
+  .footer-logo {
+    width: 100%;
+    max-width: 238px;
+    margin-bottom: 36px;
+  }
+
+  .description {
+    margin: 0;
+
+    font: normal 15px $montserrat-light;
+    line-height: 30px;
+  }
+
+  .footer-title {
+    margin: 0 0 36px;
+
+    font: normal 20px $montserrat-medium;
+    line-height: 26.26px;
+    color: $white;
+  }
+
+  .holder-copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+
+    .description {
+      position: relative;
+
+      font-size: 14px;
+      line-height: 28px;
+
+      &:last-child {
+        margin-left: 40px;
+
+        &:after {
+          content: "|";
+  
+          position: absolute;
+          top: 0;
+          right: initial;
+          bottom: 0;
+          left: -20px;
+  
+          display: flex;
+          
+          color: rgba(255, 255, 255, 0.05);
+        }
+      }
+    }
+
+    .copyright-link {
+      font: normal 14px $montserrat-light;
+      line-height: 28px;
+      color: $white;
+  
+      @include on-event() {
+        text-decoration: none;
+  
+        @include respond-to(lg-up) {
+          color: $brand-color;      
+        }
+      }
+    }
+  }
+
+  .footer-form {
+    margin: 30px 0;
+
+    .form-group {
+      position: relative;
+
+      margin: 0;
+    }
+
+    .footer-icon {
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: 20px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-icon-image {
+      width: 100%;
+      max-width: 26px;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 54px;
+      padding: 12px 160px 12px 60px;
+      margin: 0;
+
+      font: normal 20px $montserrat-light;
+      line-height: 30px;
+      color: rgba(255, 255, 255, 0.5);
+
+      background-color: rgba(28,28,28,0.9);
+      background-size: 24px 20px, auto;
+      border: none;
+      border-radius: 0;
+
+      transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+      &:focus {
+        color: $white;
+      }
+
+      @include placeholder() {
+        color: $white;
+      }
+    }
+
+    .btn-green {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: initial;
+      left: initial;
+
+      width: 100%;
+      max-width: 140px;
+      height: 100%;
+    }
+  }
+
+  @include respond-to(md-down) {
+    padding: 90px 30px 60px;
+
+    .footer-form {
+      .footer-icon {
+        display: none;
+      }
+
+      .form-control {
+        padding: 12px;
+
+        font-size: 15px;
+        text-align: center;
+      }
+
+      .btn-green {
+        top: 55px;
+        
+        max-width: 100%;
+
+        @include on-event() {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  @include respond-to(sm) {
+    .footer-form {
+      .form-control {
+        padding: 12px 160px 12px 20px;
+
+        text-align: left;
+      }
+      .btn-green {
+        top: 0;
+
+        max-width: 140px;
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    padding: 90px 20px 60px;
+
+    .footer-logo {
+      max-width: 200px;
+    }
+
+    .half-info,
+    .half-subscribe {
+      padding: 0;
+    }
+
+    .half-subscribe {
+      margin-top: 40px;
+    }
+
+    .holder-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .description {
+      font-size: 14px;
+    }
+
+    .holder-copyright {
+      flex-direction: column;
+
+      .description {
+        margin: auto;
+
+        text-align: center;
+
+        &:last-child {
+          margin: auto;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .holder-copyright {
+      margin-right: -15px;
+      margin-left: -15px;
+
+      .description,
+      .copyright-link {
+        font-size: 12px;
+      }
+    }
+  }
+}

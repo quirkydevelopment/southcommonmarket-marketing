@@ -1,0 +1,19 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($font-opensans, $base-url + 'fonts/', 'opensans-regular', 'opensans-regular');
+@include font-face($bebas-regular, $base-url + 'fonts/', 'bebas-regular', 'bebas-regular');
+@include font-face($lora-bold, $base-url + 'fonts/', 'lora-bold', 'lora-bold');
+@include font-face($lora-regular, $base-url + 'fonts/', 'lora-regular', 'lora-regular');
+@include font-face($montserrat-black, $base-url + 'fonts/', 'montserrat-black', 'montserrat-black');
+@include font-face($montserrat-bold, $base-url + 'fonts/', 'montserrat-bold', 'montserrat-bold');
+@include font-face($montserrat-extra-bold, $base-url + 'fonts/', 'montserrat-extra-bold', 'montserrat-extra-bold');
+@include font-face($montserrat-light, $base-url + 'fonts/', 'montserrat-light', 'montserrat-light');
+@include font-face($montserrat-medium, $base-url + 'fonts/', 'montserrat-medium', 'montserrat-medium');
+@include font-face($montserrat-regular, $base-url + 'fonts/', 'montserrat-regular', 'montserrat-regular');
+@include font-face($montserrat-semi-bold, $base-url + 'fonts/', 'montserrat-semi-bold', 'montserrat-semi-bold');
+@include font-face($bukhari-script-regular, $base-url + 'fonts/', 'bukhari-script-regular', 'bukhari-script-regular');
+@include font-face($nexa-bold, $base-url + 'fonts/', 'nexa-bold', 'nexa-bold');
