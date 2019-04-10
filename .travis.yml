@@ -10,4 +10,4 @@ deploy:
   bucket: 'southcommonmarket'
   skip-cleanup: true
   acl: public_read
-  local_directory: dist
+  local_dir: dist
