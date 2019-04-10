@@ -1,0 +1,6 @@
+Redirect /about /about.html
+Redirect /shop /shop.html
+Redirect /products /products.html
+Redirect /vendors /vendors.html
+
+Redirect /register southcommonmarket.herokuapp.com/register
