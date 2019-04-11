@@ -1,0 +1,78 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the About Scm page.
+// ----------------------------------------------------------------------------
+
+
+.about-scm {
+
+  .section-green-title {
+    margin-top: 30px;
+  }
+
+  .section-about {
+    margin-bottom: 30px;
+
+    .holder-about {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 70px;
+    }
+  
+    .holder-image {
+      width: 30%;
+    }
+  
+    .image-logo {
+      width: 100%;
+      box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.45);
+    }
+  
+    .holder-desc {
+      padding-left: 50px;
+      width: 70%;
+    }
+  
+    .description {
+      font-size: 16px;
+      text-align: justify;
+      color: $hippie-green;
+      font-family: $montserrat-medium;
+      letter-spacing: 2px;
+      line-height: 28px;
+    }
+  }
+
+  .section-map {
+    .holder-map {
+      width: 100%;
+    }
+  }
+
+  @include respond-to (sm-down) {
+    .section-about {
+      .holder-about {
+        margin-top: 35px;
+      }
+
+      .holder-image {
+        margin-bottom: 25px;
+        width: 100%;
+      }
+
+      .image-logo {
+        max-width: 155px;
+      }
+
+      .holder-desc {
+        padding: 0;
+        width: 100%;
+      }
+
+      .description {
+        font-size: 14px;
+      }
+    }
+  }
+}

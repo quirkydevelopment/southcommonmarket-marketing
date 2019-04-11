@@ -530,6 +530,10 @@
     .holder-featured {
       margin: 12.5px 0;
 
+      .product-link {
+        text-decoration: none;
+      }
+
       .holder-box {
         display: flex;
         flex-wrap: wrap;

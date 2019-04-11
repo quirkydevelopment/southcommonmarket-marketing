@@ -32,13 +32,17 @@
   'components/buttons',
   'components/floating-social-media',
   'components/modals',
-  'components/forms';
+  'components/forms',
+  'components/forms-dashboard',
+  'components/table-loader',
+  'components/image-upload';
 
 // 6. Page-specific styles
 @import
   'pages/home',
   'pages/shop',
   'pages/product-shop',
+  'pages/about-scm',
   'pages/vendor-shop';
 
 // 7. Themes

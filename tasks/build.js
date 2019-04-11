@@ -13,14 +13,7 @@ const path = {
 }
 
 // const parallelTask = ['build:html', 'build:css', 'build:fonts']
-const parallelTask = ['build:css', 'build:fonts', 'build.copyfiles']
-
-gulp.task('build.copyfiles', done => {
-  gulp.src(path.src + '.htaccess')
-    .pipe(gulp.dest(path.dist));
-
-  done()
-});
+const parallelTask = ['build:css', 'build:fonts']
 
 // gulp.task('build:html', done => {
 //   return gulp.src(`${path.src}**/*.html`)

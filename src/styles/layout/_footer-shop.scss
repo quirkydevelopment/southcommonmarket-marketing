@@ -129,6 +129,10 @@
     }
   }
 
+  .break {
+    display: none;
+  }
+
   @include respond-to(md) {
     .footer-links {
       .scm-title {
@@ -155,12 +159,32 @@
       }
 
       .holder-links {
+        margin-top: 20px;
         width: 100%;
       }
 
       .item {
         width: 50%;
       }
+
+      .scm-contact {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+
+    .text-copyright {
+      line-height: 1.5;
+    }
+
+    .separator {
+      display: none;
+    }
+
+    .break {
+      display: block;
     }
   }
 }
