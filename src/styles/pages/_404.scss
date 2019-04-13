@@ -1,0 +1,108 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the 404 page.
+// ----------------------------------------------------------------------------
+
+
+.page-404 {
+  position: relative;
+  height: 100vh;
+
+  .holder-not-found {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .notfound-404 {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0px auto 50px;
+  }
+
+  .holder-border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #8cc63f;
+    border: 5px dashed #711818;
+    border-radius: 5px;
+    
+    transform: rotate(45deg);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      top: -5px;
+      border-radius: 5px;
+    }
+  }
+
+  .text-404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    height: 40px;
+    
+    transform: translate(-50%, -50%);
+
+    font-family: 'Cabin', sans-serif;
+    color: $black;
+    font-weight: 700;
+    font-size: 90px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .text-subtitle {
+    font-family: 'Cabin', sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+  }
+
+  .text-description {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    color: $black;
+    font-weight: 400;
+  }
+
+  .text-link {
+    font-family: 'Cabin', sans-serif;
+    display: inline-block;
+    padding: 10px 25px;
+
+    background-color: #8cc63f;
+    border: none;
+    border-radius: 40px;
+    color: $black;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s all;
+
+    @include on-event() {
+      color: $white;
+      background-color: $text-color;
+    }
+  }
+}
+
