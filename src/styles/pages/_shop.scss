@@ -48,6 +48,8 @@
       // position: relative;
       background-size: cover;
       height: 700px;
+
+      outline: none;
   
       .container {
         height: 100%;
@@ -550,12 +552,51 @@
         width: 100%;
       }
 
+      .holder-hover-state {
+        display: none;
+        text-align: center;
+
+        .hover-state-title {
+          font-size: 20px;
+          letter-spacing: 1px;
+          color: $white;
+          font-family: $bebas-regular;
+        }
+
+        .hover-state-link {
+          margin: 0 auto;
+          padding: 10px 25px;
+          color: $white;
+          text-align: center;
+          font-family: $montserrat-regular;
+
+          background: $gradient-green;
+        }
+
+        .hover-whats-new-text {
+          margin-bottom: 0;
+          margin-top: 15px;
+          font-size: 12px;
+          color: $white;
+          font-family: $montserrat-medium;
+        }
+
+        .hover-whats-new-title {
+          font-size: 26px;
+          color: $white;
+          font-family: $bebas-regular;
+        }
+      }
+
       .product,
       .slide {
         width: 25%;
+        height: 260px;
         outline: none;
-      }
 
+        transition: all .3s ease-in-out;
+      }
+    
       .holder-image {
         display: flex;
         align-items: center;
@@ -569,10 +610,60 @@
         margin: 0 auto;
       }
     }
+
+    .holder-whats-new {
+      .slide,
+      .product {
+        @include on-event() {
+          background: $gradient-green;
+
+          .best-seller-text {
+            display: none;
+          }
+
+          .holder-hover-state {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .holder-featured {
+      .slide,
+      .product {
+        @include on-event() {
+          // position: absolute;
+          background-image: url(../assets/images/featured-bg.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+
+          .holder-image {
+            display: none;
+          }
+
+          .best-seller-text {
+            display: none;
+          }
+
+          .holder-hover-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 
   .section-vendors {
     margin: 15px 0;
+
+    .holder-vendor-slide {
+      padding: 15px 0 25px;
+    }
 
     .slick {
       position: relative;
