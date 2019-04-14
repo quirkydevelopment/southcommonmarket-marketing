@@ -179,6 +179,21 @@ AppName.Modules.ThemeModule = (function() {
     });
   }
 
+  var carouselShopBanner = function() {
+    if ($('.section-banner-shop .slick-container').length) {
+      $('.section-banner-shop .slick-container').slick({
+        dots: false,
+        // infinite: true,
+        speed: 300,
+        loop: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows : false,
+      });
+    }
+  }
 
   var carouselProduct = function() {
     if ($('.section-products .slick-container').length) {
@@ -424,6 +439,7 @@ AppName.Modules.ThemeModule = (function() {
       carouselVendors();
       carouselProductNew();
       carouselProductFeatured();
+      carouselShopBanner();
     });
 
     $(window).scroll(function (event) {

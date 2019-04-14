@@ -43,38 +43,39 @@
     transition: all .3s ease-in-out;
   }
 
-  .section-hero {
-    position: relative;
-    background: url(../assets/images/shop-banner.jpg) center no-repeat;
-    background-size: cover;
-    height: 700px;
-
-    .container {
-      height: 100%;
-    }
-
-    .holder-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-
-    .banner-text {
-      margin: 0;
-      color: $white;
-      font-family: $montserrat-medium;
-
-      text-shadow: 1px 1px 2px black;
-    }
-
-    .banner-title {
-      font-size: 60px;
-      color: $white;
-      font-family: $bukhari-script-regular;
-      
-      text-shadow: 1px 1px 2px black;
+  .section-banner-shop {
+    .holder-banner-shop {
+      // position: relative;
+      background-size: cover;
+      height: 700px;
+  
+      .container {
+        height: 100%;
+      }
+  
+      .holder-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+  
+      .banner-text {
+        margin: 0;
+        color: $white;
+        font-family: $montserrat-medium;
+  
+        text-shadow: 1px 1px 2px black;
+      }
+  
+      .banner-title {
+        font-size: 60px;
+        color: $white;
+        font-family: $bukhari-script-regular;
+        
+        text-shadow: 1px 1px 2px black;
+      }
     }
   }
 
@@ -667,8 +668,10 @@
       }
     }
 
-    .section-hero {
-      height: 450px;
+    .section-banner-shop {
+      .holder-banner-shop {
+        height: 450px;
+      }
     }
   }
 
@@ -700,6 +703,21 @@
         }
       }
     }
+
+    .section-banner-shop {
+      .holder-banner-shop {
+        
+        .banner-text {
+          font-size: 18px;
+          text-align: center;
+        }
+
+        .banner-title {
+          text-align: center;
+          font-size: 35px
+        }
+      }
+    }
   }
 
   @include respond-to(sm-down) {
@@ -711,13 +729,12 @@
       font-size: 26px;
     }
 
-    .section-hero {
-      height: 300px;
-      
-      .banner-title {
-        font-size: 35px
+    .section-banner-shop {
+      .holder-banner-shop {
+        height: 300px;
       }
     }
+
 
     .section-shop-now {
       .holder-small {
@@ -801,16 +818,18 @@
   }
 
   @include respond-to(xs) {
-    .section-hero {
 
-      .banner-text {
-        font-size: 14px;
-        text-align: center;
-      }
-
-      .banner-title {
-        font-size: 26px;
-        text-align: center;
+    .section-banner-shop {
+      .holder-banner-shop {
+        .banner-text {
+          font-size: 13px;
+          text-align: center;
+        }
+  
+        .banner-title {
+          font-size: 26px;
+          text-align: center;
+        }
       }
     }
 
