@@ -136,7 +136,7 @@ AppName.Modules.ThemeModule = (function() {
       tabItem.each(function() {
         $(this).find('.tab-link').click(function() {
           tabItem.removeClass('active');
-          setTimeout(() => {
+          setTimeout(function() {
             $(this).parent().addClass('active');
           }, 100);
         })
