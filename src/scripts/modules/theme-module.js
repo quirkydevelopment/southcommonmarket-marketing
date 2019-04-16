@@ -15,6 +15,20 @@ AppName.Modules.ThemeModule = (function() {
     // });
   };
 
+  var interactiveBanner = function() {
+    var windowWidth = $(window).width();
+    var main = $('main');
+
+    if (main.hasClass('home')) {
+      main.mousemove(function(e) {
+        var imgX = (($(window).width() / 1) - event.pageX) * 0.2;
+        var imgY = (($(window).height() / 1) - event.pageY) * 0.2;
+        $('.section-hero .holder-image .hero-image').css('margin-left', (-imgX + 50) + 'px');
+        $('.section-hero .holder-image .hero-image').css('margin-top', (-imgY + 50) + 'px');
+      })
+    }
+  }
+
   var headerScroll = function() {
     var scrolledHeight = $(window).scrollTop();
     
@@ -422,6 +436,7 @@ AppName.Modules.ThemeModule = (function() {
     _privateMethod();
 
     $(window).on('load', function (event) {
+      interactiveBanner();
       headerScroll();
       headerHamburger();
       scrollNextSection();
