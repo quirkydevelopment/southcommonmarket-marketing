@@ -10,16 +10,16 @@ $(window).load(function() {
   })
   
   function getVendors() {
-    const limit = 15;
-    const page = 1;
-    const sortName = '';
-    const sort = -1;
-    const query = $('#vendorQuery').val();
+    var limit = 15;
+    var page = 1;
+    var sortName = '';
+    var sort = -1;
+    var query = $('#vendorQuery').val();
 
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = `http://southcommonmarket.herokuapp.com/api/vendors/all?limit=${limit}&page=${page}&query=${query}&sortName=${sortName}&sort=${sort}`;
+    var proxyurl = "https://cors-anywhere.herokuapp.com/";
+    var url = 'http://southcommonmarket.herokuapp.com/api/vendors/all?limit=' + limit + '&page=' + page + '&query=' + query + '&sortName=' + sortName + '&sort=' + sort;
 
-    const request = $.ajax({
+    var request = $.ajax({
       url: proxyurl + url,
       type: 'get',
       headers: { 'Content-Type': 'application/json' },
@@ -41,12 +41,19 @@ $(window).load(function() {
   }
 
   function vendorTemplate(vendor) {
-    const template = `<li class="list">
-                        <a href="#">
-                          <img class="product-image" src="${(vendor.profile.length !== 0 && vendor.profile[0].image) ? vendor.profile[0].image : './assets/images/sunflowers-min.jpg'}" alt="">
-                          <p class="vendor-name">${vendor.company}</p>
-                        </a>
-                      </li>`;
+    var template = ''; 
+    template += '<li class="list">';
+    template +=   '<a href="#">';
+
+    if (vendor.profile.length !== 0 && vendor.profile[0].image) {
+      template += '<img class="product-image" src="'+ vendor.profile[0].image +'" alt="" />';
+    } else {
+      template += '<img class="product-image" src="./assets/images/sunflowers-min.jpg" alt="" />';
+    }
+
+    template += '<p class="vendor-name">'+ vendor.company +'</p>';
+    
+    template += '</a></li>';
 
     $(template).appendTo('#vendorLists');
   }
@@ -54,7 +61,7 @@ $(window).load(function() {
   function paginationTemplate(totalPages) {
     if (totalPages > 1) {
       for (let index = 1; index <= totalPages; index++) {
-        const template = `<li class="page-list-item"><a class="page-link">${index}</a></li>`;
+        var template = '<li class="page-list-item"><a class="page-link">' + index + '</a></li>';
   
         $(template).appendTo('#vendorsPagination');
       }
