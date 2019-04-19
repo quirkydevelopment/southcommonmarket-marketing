@@ -13,7 +13,7 @@ const path = {
 }
 
 // const parallelTask = ['build:html', 'build:css', 'build:fonts']
-const parallelTask = ['build:css', 'build:fonts']
+const parallelTask = ['build:css', 'build:fonts', 'build:copyjs']
 
 // gulp.task('build:html', done => {
 //   return gulp.src(`${path.src}**/*.html`)
@@ -23,6 +23,16 @@ const parallelTask = ['build:css', 'build:fonts']
 
 //   done()
 // })
+
+gulp.task('build:copyjs', done => {
+  return gulp.src([
+    `${path.src}scripts/modules/vendors.js`,
+    `${path.src}scripts/modules/products.js`,
+  ])
+  .pipe(gulp.dest(`${path.dist}scripts/`))
+
+  done()
+})
 
 gulp.task('build:css', done => {
   return gulp.src(`${path.src}styles/main.min.css`)
