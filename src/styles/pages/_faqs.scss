@@ -1,0 +1,51 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the faqs page.
+// -----------------------------------------------------------------------------
+
+.faqs {
+
+  .green-title {
+    padding: 15px 0;
+  }
+
+  .holder-faqs {
+
+    .holder-faqs-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .faqs-list {
+      margin-top: 15px;
+      text-decoration: none;
+    }
+ 
+    .accordion-link {
+      text-decoration: none;
+    }
+
+    .text-question {
+      position: relative;
+      margin-bottom: 0;
+      font-family: $montserrat-light;
+    }
+
+    .card-body {
+      font-family: $montserrat-light;
+    }
+
+    .rotate-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-bottom: 0;
+      transform: translateY(-50%);
+    }
+
+    .title-bold {
+      font-family: $montserrat-bold; 
+    }
+  }
+}

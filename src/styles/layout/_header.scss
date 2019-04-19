@@ -176,6 +176,14 @@
     }
   }
 
+  @include respond-to(lg) {
+    .navbar {
+      .nav-link {
+        font-size: 14px;
+      }
+    } 
+  }
+
   @include respond-to(lg-down) {
     .navbar {
       .navbar-menu {

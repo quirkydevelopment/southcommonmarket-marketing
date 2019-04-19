@@ -8,6 +8,12 @@
   // position: fixed;
   // bottom: 0;
   padding: 40px 280px;
+
+  .modal-content {
+    margin: 0px auto; 
+    width: 350px;
+    padding: 2;   
+  }
 }
 
 .modal-sample-buttons {
@@ -29,11 +35,6 @@
   max-width: 200px;
 }
 
-.modal-content {
-  margin: 0px auto; 
-  width: 350px;
-  padding: 2;   
-}
 
 .holder-content {
   position: relative;

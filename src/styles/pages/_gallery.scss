@@ -1,0 +1,168 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the gallery page.
+// -----------------------------------------------------------------------------
+
+.gallery {
+  
+  .section-green-title {
+    padding: 20px 0;
+
+    .desc {
+      font-size: 24px;
+      color: $apple2;
+      font-family: $montserrat-regular;
+      text-align: center;
+    }
+  }
+
+  .holder-faqs {
+    padding: 25px 0 30px;
+
+    .row {
+      flex-direction: column;
+      max-height: 1450px;
+    }
+
+    .ekko-lightbox.show {
+      background-color: rgba(0,0,0,.6);
+    }
+    
+    .modal-content {
+      width: 100%;
+    }
+
+    .holder-image {
+      overflow: hidden;
+      position: relative;
+      width: 50%;
+      
+      .image-link {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          z-index: 1;
+
+          transition: all .3s ease-in-out;
+        }
+      }
+
+      .image-gallery {
+        width: 100%;
+        height: 450px;
+        
+        transition: all .3s ease-in-out;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        .image-gallery {
+          height: 550px;
+        }
+      }
+
+      @include on-event() {
+        .image-link {
+          &:before {
+            background-color: rgba(0,0,0,.6);
+          }
+        }
+
+        .image-gallery {
+          transform: scale(1.1);
+        }
+
+        .holder-text {
+          bottom: 15px;
+        }
+      }
+    }
+
+    .holder-text {
+      position: absolute;
+      bottom: -70px;
+      left: 15px;
+      z-index: 2;
+
+      transition: all .3s ease-in-out;
+    }
+
+    .text-title {
+      margin-bottom: 0;
+      color: $white;
+      font-family: $montserrat-regular;
+    }
+
+    .text-sub {
+      color: $white;
+      font-size: 15px;
+      font-family: $montserrat-light;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 991px) and (max-width: 576px) {
+    .holder-faqs {
+      .row {
+        max-height: 1000px;
+      }
+
+      .holder-image {
+        .image-gallery {
+          height: 300px;
+        }
+  
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .image-gallery {
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+
+    .section-green-title {
+      padding-bottom: 0;
+
+      .green-title {
+        font-size: 34px;
+      }
+
+      .desc {
+        font-size: 14px;
+      }
+    }
+
+    .holder-faqs {
+      padding-top: 0;
+
+      .row {
+        flex-direction: row;
+        max-height: unset;
+      }
+
+      .holder-image {
+        width: 100%;
+        .image-gallery {
+          height: auto;
+        }
+  
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .image-gallery {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

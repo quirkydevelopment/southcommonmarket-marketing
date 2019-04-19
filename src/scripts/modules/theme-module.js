@@ -15,6 +15,15 @@ AppName.Modules.ThemeModule = (function() {
     // });
   };
 
+  var masonryGallery = function() {
+    if($('main').hasClass('gallery')) {
+      $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    }
+  }
+
   var interactiveBanner = function() {
     var windowWidth = $(window).width();
     var main = $('main');
@@ -455,6 +464,7 @@ AppName.Modules.ThemeModule = (function() {
       carouselProductNew();
       carouselProductFeatured();
       carouselShopBanner();
+      masonryGallery();
     });
 
     $(window).scroll(function (event) {

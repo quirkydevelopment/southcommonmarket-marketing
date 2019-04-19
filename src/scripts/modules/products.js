@@ -1,5 +1,12 @@
 $(window).load(function() {
 
+  $('#sortBy').on('change', function() {
+    getProducts();
+    $('#totalResults').empty();
+    $('#productLists').find('li:not(:first-child)').remove();
+    $('#productListLoader').removeClass('hidden');
+  })
+
   getCategories();
   getProducts();
 
@@ -36,7 +43,7 @@ $(window).load(function() {
   function getProducts() {
     const limit = 15;
     const page = 1;
-    const sortName = '';
+    const sortName = $('#sortBy').val() || '';
     const sort = -1;
     const category = new URLSearchParams(window.location.search).get('category') || '';
 
