@@ -28,6 +28,7 @@ gulp.task('build:copyjs', done => {
   return gulp.src([
     `${path.src}scripts/modules/vendors.js`,
     `${path.src}scripts/modules/products.js`,
+    `${path.src}scripts/modules/faqs.js`,
   ])
   .pipe(gulp.dest(`${path.dist}scripts/modules/`))
 
