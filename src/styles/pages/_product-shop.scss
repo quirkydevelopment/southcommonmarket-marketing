@@ -203,6 +203,16 @@
       .holder-item {
         border-right: 1px solid $hippie-green;
       }
+
+      &--loader {
+        .holder-item {
+          border: none;
+        }
+      }
+    }
+
+    .hidden {
+      display: none;
     }
   
     .product-image {

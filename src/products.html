@@ -110,45 +110,14 @@
               <h4 class="filter-nav-title">Product Categories</h4>
             </div>
             <div class="holder-list">
-              <ul class="filter-nav">
+              <ul id="categories" class="filter-nav">
                 <li class="filter-list">
-                  <a class="filter-link" href="#">All</a>
+                  <a class="filter-link" href="/products">All</a>
                 </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Vegetables</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Fruits</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Meat</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Fashion</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Cuisine</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Beverages</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Shoes</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Bread, cookies, etc.</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Food Supplements</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Bath products, etc.</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Treats, goodies, etc.</a>
-                </li>
-                <li class="filter-list">
-                  <a class="filter-link" href="#">Art, poetry, etc.</a>
+                <li id="categoryLoader" class="filter-list" style="height: 53vh; display: flex; align-items: center;">
+                  <a class="filter-link">
+                    Loading Categories &nbsp; <i class="fas fa-spinner fa-spin"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -177,199 +146,31 @@
                 </select>
                 <select class="btn-select">
                   <option class="input-select" selected="true" value="default">Default Sorting</option>
-                  <option class="input-select" value="new">New</option>
-                  <option class="input-select" value="price">price</option>
+                  <option class="input-select" value="name">Name</option>
+                  <option class="input-select" value="create_at">New</option>
+                  <option class="input-select" value="price">Price</option>
                 </select>
-                <div class="holder-btn-list">
+                <div class="holder-btn-list" hidden>
                   <button class="btn-grid"><span class="fas fa-list"></span></button>
                   <button class="btn-grid"><span class="fas fa-th"></span></button>
                 </div>
               </div>
             </div>
             <div class="holder-product-list">
-              <ul class="inner-list">
-                <li class="product-list">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
+              <ul id="productLists" class="inner-list">
+                <li id="productListLoader" class="product-list product-list--loader w-100">
+                  <div class="holder-item" style="display: flex; text-align: center; height: 50vh; align-items: center; justify-content: center; color: #58923d;">
+                    Loading Products &nbsp; <i class="fas fa-spinner fa-spin"></i>
+                  </div>
                 </li>
-                <li class="product-list product-new">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list product-new">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list product-new">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Treats, goodies, etc</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list product-new">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list product-new">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="product-list">
-                  <a class="product-link" href="#">
-                    <div class="holder-item">
-                      <div class="holder-image">
-                        <img class="product-image" src="./assets/images/best-seller-1.png" alt="best seller image">
-                      </div>
-                      <div class="holder-info">
-                        <h5 class="product-text product-category text-center">Fruits</h5>
-                        <p class="product-text product-item text-center">Avocado</p>
-                        <p class="product-text product-price text-center">$Price</p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
+                <!-- Products here -->                
               </ul>
-              <div class="holder-filter-item-number">
-                <p class="filter-item-number text-right">
-                  Showing 
-                  <span class="filter-showed-number">1-12</span> 
-                  of 
-                  <span class="filter-total-number">15</span> 
-                  results
-                </p>
+              <div id="totalResults" class="holder-filter-item-number">
+                <!-- Total showing results here -->
               </div>
               <div class="pagination-pages pagination-vendor-shop">
-                <ul class="list-unstyled page-list">
-                  <li class="page-list-item"><a href="#" class="page-link active">1</a></li>
-                  <li class="page-list-item"><a href="#" class="page-link">2</a></li>
+                <ul id="productsPagination" class="list-unstyled page-list">
+                  <!-- Pagination here -->
                 </ul>
               </div>
             </div>
@@ -479,6 +280,7 @@
   <script src="./scripts/core/base.js"></script>
   <script src="./scripts/modules/theme-module.js"></script>
   <script src="./scripts/bootstrapper.js"></script>
+  <script src="./scripts/modules/products.js"></script>
   <!-- endbuild -->
 
   <!--[if lte IE 9]>
