@@ -30,11 +30,11 @@ $(window).load(function() {
     template += '<li class="faqs-list">';
     template += '<div class="card">';
     template += '<div class="card-header" role="tab" id="headingOne'+ index +'">'
-    template += '<a class="accordion-link" data-toggle="collapse" data-parent="#accordionEx" href="#collapse'+ index +'" aria-expanded="true" aria-controls="collapse'+ index +'">';
+    template += '<a class="accordion-link" data-toggle="collapse" data-parent="#faqLists" href="#collapse'+ index +'" aria-expanded="false" aria-controls="collapse'+ index +'">';
     template += '<h5 class="text-question">';
     template += '<span class="title-bold">Question: </span>'+ faq.question +' <i class="fas fa-angle-down rotate-icon"></i>'    
     template += '</h5></a></div>';
-    template += '<div id="collapse'+ index +'" class="collapse show" role="tabpanel" aria-labelledby="headingOne'+ index +'" data-parent="#accordionEx">'
+    template += '<div id="collapse'+ index +'" class="collapse" role="tabpanel" aria-labelledby="headingOne'+ index +'" data-parent="#faqLists">'
     template += '<div class="card-body">';
     template += '<span class="title-bold">Answer: </span> '+ faq.answer;
     template += '</div></div></div></li>';    
