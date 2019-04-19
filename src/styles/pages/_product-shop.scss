@@ -162,6 +162,9 @@
     }
   
     .holder-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
     }
   
@@ -183,18 +186,24 @@
       padding: 0 0 30px;
       border-bottom: 1px solid $hippie-green;
   
-      &:nth-of-type(-n+4) {
+      &:nth-of-type(-n+5) {
         padding-top: 0;
         margin-top: 0;
       }
   
-      &:nth-last-of-type(-n+4) {
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-bottom: 0;
-      } 
+      // &:nth-last-of-type(-n+4) {
+      //   padding-bottom: 0;
+      //   margin-bottom: 0;
+      //   border-bottom: 0;
+      // } 
   
-      &:nth-of-type(4n) {
+      &:nth-of-type(4n + 1) {
+        .holder-item {
+          border-right: none;
+        }
+      }
+
+      &:last-child {
         .holder-item {
           border-right: none;
         }
@@ -217,8 +226,12 @@
   
     .product-image {
       margin-top: 15px;
-      width: 100%;
+      width: auto;
+      height: auto;
+      max-height: 130px;
       max-width: 150px;
+      // width: 100%;
+      // max-width: 150px;
     }
   
     .product-item {
@@ -369,26 +382,32 @@
       .product-list {
         width: 33.33%;
 
-        &:nth-of-type(3n) {
+        &:nth-of-type(3n + 1) {
           .holder-item {
             border-right: none;
           }
         }
 
-        &:nth-of-type(4) {
-          margin-top: 15px;
-        }
-
-        &:nth-of-type(4n) {
+        &:nth-of-type(4n + 1) {
           .holder-item {
             border-right: 1px solid $hippie-green;
           }
         }
 
-        &:nth-last-of-type(4) {
-          margin-bottom: 15px;
-          border-bottom: 1px solid $hippie-green;
+        &:nth-of-type(5) {
+          margin-top: 15px;
         }
+
+        &:nth-of-type(5n) {
+          .holder-item {
+            border-right: 1px solid $hippie-green;
+          }
+        }
+
+        // &:nth-last-of-type(4) {
+        //   margin-bottom: 15px;
+        //   border-bottom: 1px solid $hippie-green;
+        // }
 
         &:last-child {
           .holder-item {
@@ -450,7 +469,7 @@
       .product-list {
         width: 50%;
 
-        &:nth-of-type(2n) {
+        &:nth-of-type(2n + 1) {
           .holder-item {
             border-right: none;
           }
