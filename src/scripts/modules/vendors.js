@@ -52,7 +52,7 @@ $(window).load(function() {
     }
 
     template += '<p class="vendor-name">'+ vendor.company +'</p>';
-    
+
     template += '</a></li>';
 
     $(template).appendTo('#vendorLists');
@@ -60,7 +60,7 @@ $(window).load(function() {
 
   function paginationTemplate(totalPages) {
     if (totalPages > 1) {
-      for (let index = 1; index <= totalPages; index++) {
+      for (var index = 1; index <= totalPages; index++) {
         var template = '<li class="page-list-item"><a class="page-link">' + index + '</a></li>';
   
         $(template).appendTo('#vendorsPagination');
