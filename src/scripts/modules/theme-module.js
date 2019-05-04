@@ -436,7 +436,25 @@ AppName.Modules.ThemeModule = (function() {
       $('.product-shop .holder-products .holder-left').toggleClass('holder-left-close');
     });
   }
-   
+
+  var InitActiveHeader = function() {
+    var headerShop = $('.header-shop');
+
+
+    if($('main').hasClass('about-scm')) {
+      headerShop.find('.header-nav .navbar-nav .nav-item').removeClass('active');
+      headerShop.find('.header-nav .navbar-nav .nav-item:nth-child(5)').addClass('active');
+    } else if($('main').hasClass('faqs')) {
+      headerShop.find('.header-nav .navbar-nav .nav-item').removeClass('active');
+      headerShop.find('.header-nav .navbar-nav .nav-item:nth-child(6)').addClass('active');
+    } else if($('main').hasClass('vendor-shop')) {
+      headerShop.find('.header-nav .navbar-nav .nav-item').removeClass('active');
+      headerShop.find('.header-nav .navbar-nav .nav-item:nth-child(4)').addClass('active');
+    } else if($('main').hasClass('product-shop')) {
+      headerShop.find('.header-nav .navbar-nav .nav-item').removeClass('active');
+      headerShop.find('.header-nav .navbar-nav .nav-item:nth-child(2)').addClass('active');
+    }
+  }
 
   /////////////////////
   // Public Methods //
@@ -445,6 +463,7 @@ AppName.Modules.ThemeModule = (function() {
     _privateMethod();
 
     $(window).on('load', function (event) {
+      InitActiveHeader();
       interactiveBanner();
       headerScroll();
       headerHamburger();
