@@ -275,8 +275,10 @@ input[type="text"] {
 .scroll-top-trigger {
   position: fixed;
   top: initial;
-  right: 20px;
-  bottom: 20px;
+  // right: 20px;
+  // bottom: 20px;
+  right: 29px;
+  bottom: 100px;
   left: initial;
   z-index: 100;
   
